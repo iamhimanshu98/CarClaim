@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result | LaptopLens</title>
+    <link rel="stylesheet" href="/static/styles/result.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a id="project-title" class="nav-item" href="/">LaptopLens</a>
+        </nav>
+    </header>
+    <img class="bg-image" src="/static/files/sunset.png" alt="bg">
+    <div class="container">
+        <div class="card" id="result">
+            <p class="message">Estimated Price Predicton</p>
+            <ul>
+                <li><strong>Brand                :   </strong> {{ brand }}</li>
+                <li><strong>Category             :   </strong> {{ category }}</li>
+                <li><strong>Touch Screen         :   </strong> {{ touch_screen }}</li>
+                <li><strong>Operating System     :   </strong> {{ operating_system }}</li>
+                <li><strong>Processor Brand      :   </strong> {{ processor_brand }}</li>
+                <li><strong>Processor Name       :   </strong> {{ processor_name }}</li>
+                <li><strong>Architecture         :   </strong> {{ architecture }}</li>
+                <li><strong>Generation           :   </strong> {{ generation }}</li>
+                <li><strong>RAM                  :   </strong> {{ ram }}</li>
+                <li><strong>SSD                  :   </strong> {{ ssd }}</li>
+            </ul>
+            <div class="prediction">
+                <p><strong>Prediction  :  </strong> {{ output }} ₹</p>
+            </div>
+            <div class="buttons">
+                <a id="back" href="/form">Back</a>
+                <a id="home" href="/">Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

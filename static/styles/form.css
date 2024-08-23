@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Verdana, sans-serif;
+    color: white;
+}
+:root {
+    --color1 : rgb(69, 37, 130);
+    --color2 : #353965;
+    --color3 : rgb(220, 220, 247);
+    --color4 : #ff996e;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: rgb(20, 3, 63);
+    min-height: 100vh;
+}
+
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    gap: 2em;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 6rem;
+    background-color: #201b3944;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
+#project-title {
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s;
+    font-family: "Permanent Marker";
+}
+
+#project-title:hover {
+    color: var(--color3);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: -2px;
+    min-height: 100vh;
+    padding: 6em 6em 6em;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10rem);
+}
+
+.bg-image {
+    max-width: 150vw;
+    position: fixed;
+    width: 150vw;
+    z-index: -100;
+    background-color: rgb(1, 1, 33);
+}
+
+.welcome {
+    margin-top: 2em;
+    font-weight: 500;
+    text-wrap: wrap;
+}
+
+.welcome p {
+    font-size: 1.9rem;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.container {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em 0em;
+    padding: 4em;
+    backdrop-filter: blur(5px);
+    background-color: rgba(236, 226, 255, 0.02);
+    border-radius: 8px;
+    color: black;
+    width: 60vh;
+    max-width: 80vh;
+}
+
+.form-option {
+    min-width: 45vh;
+    padding: 13px;
+    color: #b6b6b6;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    background-color: aliceblue;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    margin-bottom: 2em;
+}
+
+.form-option:focus {
+    border-color: #ffefef96;
+    box-shadow: 0 0 9px rgba(205, 200, 255, 0.53);
+
+}
+
+.form-option option {
+    background-color: #3333332c;
+    color: #000;
+}
+.form-option {
+    background-color: #cdcdff00;
+    border: 1px solid  #caa6ff00;
+}
+.form-option:hover {
+    border: 1px solid  #ffefef96;
+}
+form select{
+    outline: 1px white;
+}
+form input{
+    outline: 1px white;
+}
+input::placeholder{
+    color: #b6b6b6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+}
+
+.container button,
+.container a {
+    width: auto;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    background-color: rgba(161, 201, 203, 0);
+    border: 1px solid  #aaaaaa00;
+}
+
+.container button:hover,.container a:hover {
+    background-color: #e3d0ff15;
+    border: 1px solid  #f1e2ff78;
+    box-shadow: 0 0 5px rgba(231, 203, 255, 0.33);
+}
