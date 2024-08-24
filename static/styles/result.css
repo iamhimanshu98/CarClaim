@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", Verdana, sans-serif;
-    color: black;
+    color: white;
 }
 :root {
     --color1 : rgb(69, 37, 130);
@@ -103,12 +103,12 @@ strong {
     z-index: 10;
     margin: 2em 2em 0em;
     padding: 4em;
-    background-color: rgba(222, 202, 255, 0.676);
+    backdrop-filter: blur(5px);
+    background-color: rgba(236, 226, 255, 0.02);
     border-radius: 8px;
     color: rgb(255, 255, 255);
     height: auto;
-    width: 60vh;
-    max-width: 80vh;
+    min-width: 70vh;
     word-spacing: 5px;
     line-height: 2rem;
 }
@@ -129,40 +129,45 @@ strong {
 .buttons a {
     width: auto;
     border: none;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
+    margin-top: 1em;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1.4rem;
-    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
     transition: all 0.3s;
     background-color: rgba(161, 201, 203, 0);
-    border: 1.9px solid  #aaaaaa00;
+    border: 1px solid  #aaaaaa00;
 }
 
 #home:hover, #back:hover  {
-    border: 1.9px solid  #0d0f1afd;
-    color: #0a0a12;
+    background-color: #e3d0ff15;
+    border: 1px solid  #f1e2ff78;
+    box-shadow: 0 0 5px rgba(231, 203, 255, 0.33);
 }
 
 .message {
     font-size: 2.2rem;
     margin-bottom: 1em;
     font-weight: 500;
+    color: white;
 }
 
 .card li {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: #efefef;
     margin: 0.4em 0;
     font-weight: 300;
     list-style: none;
+    line-height: 3rem;
 }
 
-.card strong {
-    font-size: 2rem;
+.card li strong {
+    font-size: 1.6rem;
     font-weight: 300;
     margin: 0.3em 0;
+    color: #b6b6b6;
 }
 
 .prediction p,

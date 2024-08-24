@@ -20,82 +20,84 @@
             <p>Welcome to CarClaim Form</p>
         </div>
         <div class="container">
-            <form action="" method="post">
+            <form action="{{ url_for('prediction') }}" method="post">
                 <input class="form-option" type="number" name="age" id="age" min="19" max="64" placeholder="Age">
                 <select name="sex" class="form-option" id="sex" required>
                     <option value="" selected disabled hidden>Sex</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
                 </select>
-                <select name="processor_name" class="form-option" required>
-                    <option value="" selected disabled hidden>Processor Name</option>
-                    <option value="Celeron Dual">Celeron Dual</option>
-                    <option value="Pentium Quad">Pentium Quad</option>
-                    <option value="Core i3">Core i3</option>
-                    <option value="Core i5">Core i5</option>
-                    <option value="Core i7">Core i7</option>
-                    <option value="Core i9">Core i9</option>
-                    <option value="Ryzen 3">Ryzen 3</option>
-                    <option value="Ryzen 5">Ryzen 5</option>
-                    <option value="Ryzen 7">Ryzen 7</option>
-                    <option value="Ryzen 9">Ryzen 9</option>
-                    <option value="M1">M1</option>
+                <select name="education_level" class="form-option" required>
+                    <option value="" selected disabled hidden>Education Level</option>
+                    <option value="JD">JD</option>
+                    <option value="MD">MD</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Masters">Masters</option>
+                    <option value="High School">High School</option>
+                    <option value="College">College</option>
+                    <option value="Associate">Associate</option>
                 </select>
-                <input class="form-option" type="number" name="premium" id="premium" min="400" max="2100" placeholder="Policy Premium">
+                <input class="form-option" type="number" name="premium" id="premium" min="400" max="2100" placeholder="Policy Premium (₹)">
                 <select name="deductable" class="form-option" required>
-                    <option value="" selected disabled hidden>Policy Deductable</option>
+                    <option value="" selected disabled>Policy Deductable (₹)</option>
                     <option value="500">500</option>
                     <option value="1000">1000</option>
                     <option value="2000">2000</option>
                 </select>
-                <select name="touch_screen" class="form-option" required>
-                    <option value="" selected disabled hidden>Touch Screen</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                <select name="incident_type" class="form-option" required>
+                    <option value="" selected disabled hidden>Incident Type</option>
+                    <option value="Multi Vehicle Collision">Multi Vehicle Collision</option>
+                    <option value="Single Vehicle Collision">Single Vehicle Collision</option>
+                    <option value="Vehicle Theft">Vehicle Theft</option>
+                    <option value="Parked Car">Parked Car</option>
                 </select>
-                <select name="operating_system" class="form-option" required>
-                    <option value="" selected disabled hidden>Operating System</option>
-                    <option value="Windows">Windows</option>
-                    <option value="MAC">Mac</option>
+                <select name="collision_type" class="form-option" required>
+                    <option value="" selected disabled hidden>Collision Type</option>
+                    <option value="Front Collision">Front Collision</option>
+                    <option value="Rear Collision">Rear Collision</option>
+                    <option value="Side Collision">Side Collision</option>
                 </select>
-                <select name="processor_brand" class="form-option" required>
-                    <option value="" selected disabled hidden>Processor Brand</option>
-                    <option value="Intel">Intel</option>
-                    <option value="AMD">AMD</option>
-                    <option value="M1">Apple</option>
+                <select name="incident_severity" class="form-option" required>
+                    <option value="" selected disabled hidden>Incident Severity</option>
+                    <option value="Major Damage">Major Damage</option>
+                    <option value="Minor Damage">Minor Damage</option>
+                    <option value="Trivial Damage">Trivial Damage</option>
+                    <option value="Total Loss">Total Loss</option>
                 </select>
-
-                <select name="architecture" class="form-option" required>
-                    <option value="" selected disabled hidden>Architecture</option>
-                    <option value="32 Bit">32 Bit</option>
-                    <option value="64 Bit">64 Bit</option>
+                <select name="authorities_contacted" class="form-option" required>
+                    <option value="" selected disabled hidden>Authorities Contacted</option>
+                    <option value="Police">Police</option>
+                    <option value="Ambulance">Ambulance</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Other">Other</option>
                 </select>
-                <select name="processor_generation" class="form-option" required>
-                    <option value="" selected disabled hidden>Generation</option>
-                    <option value="12th">12th</option>
-                    <option value="11th">11th</option>
-                    <option value="10th">10th</option>
-                    <option value="9th">9th</option>
-                    <option value="8th">8th</option>
-                    <option value="7th">7th</option>
-                    <option value="4th">4th</option>
-                    <option value="Not Available">Not Available</option>
+                <select name="property_damage" class="form-option" required>
+                    <option value="" selected disabled>Property Damage</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select>
-                <select name="ram" class="form-option" required>
-                    <option value="" selected disabled hidden>RAM</option>
-                    <option value="4 Gb">4 GB</option>
-                    <option value="8 Gb">8 GB</option>
-                    <option value="16 Gb">16 GB</option>
-                    <option value="32 Gb">32 GB</option>
+                <select name="vehicles_involved" class="form-option" required>
+                    <option value="" selected disabled>Total Vehicle Involved</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                 </select>
-                <select name="ssd" class="form-option" required>
-                    <option value="" selected disabled hidden>SSD</option>
-                    <option value="128 GB">128 GB</option>
-                    <option value="256 GB">256 GB</option>
-                    <option value="512 GB">512 GB</option>
-                    <option value="1024 GB">1 TB</option>
-                    <option value="2048 GB">2 TB</option>
+                <select name="bodily_injuries" class="form-option" required>
+                    <option value="" selected disabled>Bodily Injuries</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
                 </select>
+                <select name="witnesses" class="form-option" required>
+                    <option value="" selected disabled>Witnesses</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input class="form-option" type="number" name="injury_claim" id="injury_claim" min="0" max="25000" placeholder="Injury Claim (₹)">
+                <input class="form-option" type="number" name="vehicle_claim" id="vehicle_claim" min="100" max="80000" placeholder="Vehicle Claim (₹)">
                 <div class="button-container">
                     <a href="/">Back</a>
                     <button type="submit">Submit</button>
